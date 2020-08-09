@@ -7,10 +7,7 @@ import com.wolf.jobsearch.api.APIJobs;
 import com.wolf.jobsearch.cli.CLIArguments;
 import com.wolf.jobsearch.cli.CLIFunctions;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Stream;
 
 import static com.wolf.jobsearch.cli.CommanderFunctions.buildCommanderWithName;
@@ -20,6 +17,11 @@ import static com.wolf.jobsearch.api.APIFunctions.*;
 public class JobSearch {
 
     public static void main(String[] args) {
+        Map<String, Integer> mapa = new HashMap<>();
+
+        mapa.clear();
+        mapa.keySet()
+
         System.out.println("Hello to Job Search!!");
         //Construimos un commander con un nombre especifico. Le pasamos de donde generar los argumentos por medio del metodo CLIArguments con referencia a la funcion newInstance
         JCommander jCommander = buildCommanderWithName("job-search", CLIArguments::newInstance);
